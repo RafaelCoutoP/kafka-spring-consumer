@@ -29,6 +29,6 @@ public class Coffer {
 
     @Override
     public String toString() {
-        return MessageFormat.format("Cat [id={0}, name={1}, age={2}]", id, name, age);
+        return MessageFormat.format("Coffer [id={0}, name={1}, age={2}]", id, name, age);
     }
 }

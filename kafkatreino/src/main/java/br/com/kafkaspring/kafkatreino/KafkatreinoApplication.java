@@ -8,7 +8,7 @@ import org.springframework.kafka.support.converter.StringJsonMessageConverter;
 
 @SpringBootApplication
 public class KafkatreinoApplication {
-
+	//{"id":2, "name":"Shanghai Lungo", "age":2}
 	public static void main(String[] args) {
 		SpringApplication.run(KafkatreinoApplication.class, args);
 	}

@@ -3,13 +3,15 @@ package br.com.kafkaspring.kafkatreino;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 @Component
 public class Consumer {
 
-    // ao executar duas instancias de um consumer ele rebalanceia as particões
+    AtomicInteger coffersIncrement = new AtomicInteger(0);
     @KafkaListener(id = "super.coffer", topics = "coffers")
     public void coffers(Coffer coffer){
         System.out.println("coffer = " + coffer);
-        //{"id":1, "name":"Colombia Coffer", "age": 5}
+        coffersIncrement.incrementAndGet();
     }
 }
